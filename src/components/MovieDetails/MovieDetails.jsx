@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MovieDetails.css'
 import {Link} from 'react-router-dom'
 
-function MovieList() {
+function MovieDetails() {
 
     const dispatch = useDispatch();
     const activeMovie = useSelector(store => store.activeMovie);
@@ -27,7 +27,7 @@ function MovieList() {
                             <div>
                                 <h5>{genre.name}</h5>
                             </div>
-                        )})};
+                        )})}
                     <img src={activeMovie.poster} alt={activeMovie.title}/>
                     <p className="movieDescription">{activeMovie.description}</p>
                     <Link to="/">
@@ -40,4 +40,4 @@ function MovieList() {
     );
 }
 
-export default MovieList;
+export default MovieDetails;

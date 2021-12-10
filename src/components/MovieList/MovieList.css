@@ -2,3 +2,6 @@
     display : flex;
     flex-wrap: wrap;
 }
+.newMovieButton{
+    font-size: 16pt;
+}

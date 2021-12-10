@@ -16,6 +16,9 @@ function MovieList() {
 
     return (
         <main>
+            <Link to="/new">
+            <button className="newMovieButton">Add New Movie</button>
+            </Link>
             <h1>MovieList</h1>
             <section className="movies">
                 {movies.map(movie => {
