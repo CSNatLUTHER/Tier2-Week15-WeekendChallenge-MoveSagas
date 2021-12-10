@@ -7,6 +7,7 @@ function MovieList() {
 
     const dispatch = useDispatch();
     const activeMovie = useSelector(store => store.activeMovie);
+    const genres = useSelector(store => store.genres);
     
 
     useEffect(() => {
@@ -19,7 +20,14 @@ function MovieList() {
             <h1>Movie Details</h1>
             <section className="movieDetail">
                 <div key={activeMovie.id} >
-                    <h3>{activeMovie.title}</h3>
+                    <h2>{activeMovie.title}</h2>
+                    <h2>Genres:</h2>
+                        {genres.map(genre => {
+                        return (
+                            <div>
+                                <h5>{genre.name}</h5>
+                            </div>
+                        )})};
                     <img src={activeMovie.poster} alt={activeMovie.title}/>
                     <p className="movieDescription">{activeMovie.description}</p>
                     <Link to="/">
