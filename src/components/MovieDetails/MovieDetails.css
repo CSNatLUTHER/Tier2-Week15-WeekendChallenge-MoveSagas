@@ -1,0 +1,10 @@
+.movieDetail {
+    justify-content: center;
+    display : flex;
+    flex-wrap: wrap;
+}
+
+.movieDescription {
+    max-width: 800px;
+    justify-content: center;
+}
